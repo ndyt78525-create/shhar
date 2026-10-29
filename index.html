@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171715">
+<title>عهد ما | حمید و سحر</title>
+<style>
+:root{
+ --bg:#171715;--panel:#22221f;--gold:#c8ad76;
+ --gold2:#e8d7ad;--text:#f4eee2;--muted:#b6afa2;
+ --line:#484235;--green:#879c80;
+}
+*{box-sizing:border-box}
+body{
+ margin:0;background:var(--bg);color:var(--text);
+ font-family:Tahoma,"Segoe UI",sans-serif;line-height:2;
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;
+ background:radial-gradient(ellipse at 50% 0%,#6a58301c,transparent 60%);
+}
+main{width:min(760px,100%);margin:auto;padding:20px 15px 55px}
+header{text-align:center;padding:36px 10px 30px}
+.brand{color:var(--gold);letter-spacing:3px;font-size:11px}
+h1{font-size:clamp(34px,9vw,58px);font-weight:400;
+ margin:12px 0;color:var(--gold2);letter-spacing:-2px}
+.subtitle{color:var(--muted);font-size:13px}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:24px 0}
+.card{
+ background:linear-gradient(145deg,#252521,#1d1d1a);
+ border:1px solid var(--line);border-radius:18px;
+ padding:22px;margin:16px 0;
+ box-shadow:0 12px 32px #0002;
+}
+h2{font-size:17px;font-weight:500;color:var(--gold2);margin:0 0 15px}
+p{font-size:13px;color:var(--muted)}
+label{display:block;font-size:13px;margin:12px 0 5px}
+input,textarea{
+ width:100%;background:#151513;border:1px solid #4a463c;
+ border-radius:10px;padding:12px;color:var(--text);
+ font:inherit;font-size:14px;outline:none;
+}
+input:focus,textarea:focus{border-color:var(--gold)}
+textarea{min-height:95px;resize:vertical}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.promise{
+ display:flex;gap:12px;align-items:flex-start;
+ padding:12px 0;border-bottom:1px solid #ffffff0d;
+ font-size:13px;cursor:pointer;
+}
+.promise:last-child{border:0}
+.promise input{width:18px;height:18px;accent-color:var(--gold);margin-top:7px;flex-shrink:0}
+.promise b{display:block;font-weight:500;color:var(--text)}
+.promise small{display:block;color:var(--muted);font-size:11px;line-height:1.9}
+.notice{border-right:2px solid var(--gold);padding:8px 13px;background:#c8ad760b}
+.notice p{margin:3px 0}
+canvas{
+ display:block;width:100%;height:170px;background:#151513;
+ border:1px solid #4a463c;border-radius:10px;touch-action:none;
+}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
+button{
+ border:1px solid var(--gold);border-radius:10px;padding:12px 9px;
+ background:var(--gold);color:#211e17;font:inherit;font-size:13px;
+ cursor:pointer;
+}
+button.secondary{background:transparent;color:var(--gold2)}
+button.danger{border-color:#986b64;color:#e3b9b1;background:transparent}
+button:active{transform:scale(.99)}
+.status{font-size:12px;color:var(--green);min-height:24px;margin-top:10px}
+footer{text-align:center;color:#898477;font-size:11px;padding:25px 8px}
+@media(max-width:480px){
+ .grid{grid-template-columns:1fr}
+ .card{padding:17px}
+ .actions{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+ <div class="brand">HAMID & SAHAR · PRIVATE PROMISE</div>
+ <div class="rule"></div>
+ <h1>عهدِ ما</h1>
+ <div class="subtitle">یک قرار صادقانه برای رابطه‌ای ارزشمند</div>
+ <div class="rule"></div>
+ <p>بعضی قول‌ها را نمی‌شود با طلا سنجید؛
+ ارزششان به صداقتی است که هر روز نشان می‌دهیم.</p>
+</header>
+
+<form id="agreement">
+<section class="card">
+ <h2>01 — مشخصات ثبت عهد</h2>
+ <div class="grid">
+  <div><label for="person1">نام نفر اول</label>
+   <input id="person1" value="حمید" required></div>
+  <div><label for="person2">نام نفر دوم</label>
+   <input id="person2" value="سحر" required></div>
+ </div>
+ <div class="grid">
+  <div><label for="date">تاریخ ثبت</label>
+   <input id="date" type="date" required></div>
+  <div><label for="title">عنوان این عهد</label>
+   <input id="title" value="عهد عشق و صداقت" required></div>
+ </div>
+</section>
+
+<section class="card">
+ <h2>02 — قول‌هایی که با رضایت انتخاب می‌کنیم</h2>
+ <p>هر مورد را جداگانه بخوانید. فقط مواردی را علامت بزنید که
+ هر دو نفر واقعاً با آن موافق هستید.</p>
+
+ <label class="promise">
+  <input type="checkbox" name="promises" value="وفاداری">
+  <span><b>وفاداری به رابطه</b>
+   <small>برای حفظ رابطه‌مان صادقانه تلاش می‌کنیم و وارد رابطه
+   عاشقانه یا صمیمیت پنهانیِ مغایر با توافقمان نمی‌شویم.</small></span>
+ </label>
+
+ <label class="promise">
+  <input type="checkbox" name="promises" value="صداقت">
+  <span><b>صداقت، حتی وقتی گفتنش سخت است</b>
+   <small>درباره موضوعات مهمی که بر رابطه‌مان اثر می‌گذارند،
+   با احترام و بدون فریب با هم حرف می‌زنیم.</small></span>
+ </label>
+
+ <label class="promise">
+  <input type="checkbox" name="promises" value="احترام">
+  <span><b>احترام در زمان ناراحتی</b>
+   <small>توهین، تهدید، تحقیر و ترساندن را جایگزین گفت‌وگو
+   نمی‌کنیم؛ اگر عصبانی شدیم، برای آرام‌شدن فرصت می‌گیریم.</small></span>
+ </label>
+
+ <label class="promise">
+  <input type="checkbox" name="promises" value="حل اختلاف">
+  <span><b>حل اختلاف با گفت‌وگو</b>
+   <small>اگر اعتمادمان آسیب دید، درباره اتفاق، مرزها و
+   راه جبران صحبت می‌کنیم؛ بدون اجبار یا انتقام.</small></span>
+ </label>
+
+ <label class="promise">
+  <input type="checkbox" name="promises" value="انتخاب دوباره">
+  <span><b>انتخاب آگاهانه، نه اجبار</b>
+   <small>می‌پذیریم که رابطه به رضایت هر دو نفر نیاز دارد
+   و هیچ‌کس مالک دیگری نیست.</small>
+ </label>
+</section>
+
+<section class="card">
+ <h2>03 — توافق شخصی ما</h2>
+ <label for="boundaries">مرزها و توافق‌های مشخص ما</label>
+ <textarea id="boundaries" placeholder="مثلاً درباره ارتباط با دیگران، صداقت و چیزهایی که برای هر دوی ما قابل قبول است..."></textarea>
+ <label for="repair">اگر اعتماد آسیب دید، چه راهی برای جبران می‌پذیریم؟</label>
+ <textarea id="repair" placeholder="مثلاً گفت‌وگوی صادقانه، پذیرفتن مسئولیت، فرصت برای تصمیم‌گیری و مشاوره..."></textarea>
+ <div class="notice">
+  <p>این بخش برای توافق آزادانه است، نه تعیین مجازات یا
+  گرفتن حق انتخاب از طرف مقابل.</p>
+ </div>
+</section>
+
+<section class="card">
+ <h2>04 — تأیید و امضای داوطلبانه</h2>
+ <p>امضا فقط زمانی انجام شود که متن خوانده شده و هر دو نفر
+ بدون فشار با آن موافق باشند.</p>
+
+ <label class="promise">
+  <input type="checkbox" id="consent1">
+  <span><b>تأیید نفر اول</b>
+   <small>متن را خوانده‌ام، انتخاب‌هایم را می‌فهمم و با رضایت
+   خودم آن‌ها را تأیید می‌کنم.</small></span>
+ </label>
+ <label class="promise">
+  <input type="checkbox" id="consent2">
+  <span><b>تأیید نفر دوم</b>
+   <small>متن را خوانده‌ام، انتخاب‌هایم را می‌فهمم و با رضایت
+   خودم آن‌ها را تأیید می‌کنم.</small></span>
+ </label>
+
+ <label for="signature1">امضای نفر اول — با انگشت یا قلم</label>
+ <canvas id="signature1" aria-label="محل امضای نفر اول"></canvas>
+ <button type="button" class="secondary" onclick="clearSign('signature1')">پاک کردن امضای اول</button>
+
+ <label for="signature2">امضای نفر دوم — با انگشت یا قلم</label>
+ <canvas id="signature2" aria-label="محل امضای نفر دوم"></canvas>
+ <button type="button" class="secondary" onclick="clearSign('signature2')">پاک کردن امضای دوم</button>
+
+ <label for="note">یادداشت نهایی (اختیاری)</label>
+ <textarea id="note" placeholder="حرفی که دوست داریم در پایان این عهد به هم بگوییم..."></textarea>
+
+ <div class="notice">
+  <p>امضای ترسیمی و فایل ذخیره‌شده به‌تنهایی هویت امضاکننده
+  یا اعتبار حقوقی سند را اثبات نمی‌کنند.</p>
+ </div>
+</section>
+
+<div class="actions">
+ <button type="submit">ذخیره عهد در این گوشی</button>
+ <button type="button" class="secondary" onclick="downloadData()">دریافت فایل اطلاعات</button>
+ <button type="button" class="secondary" onclick="shareData()">اشتراک‌گذاری عهد</button>
+ <button type="button" class="secondary" onclick="window.print()">چاپ / ذخیره PDF</button>
+ <button type="button" class="danger" onclick="deleteData()">پاک کردن اطلاعات ذخیره‌شده</button>
+</div>
+<div class="status" id="status" role="status" aria-live="polite"></div>
+</form>
+
+<footer>
+ساخته‌شده برای یک رابطه‌ی محترمانه، صادقانه و دوطرفه<br>
+HAMID & SAHAR
+</footer>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const STORE = "ahde_ma_hamid_sahar_v1";
+
+$("date").value = new Date().toLocaleDateString("en-CA");
+
+function setupCanvas(id){
+ const c=$(id),ctx=c.getContext("2d");
+ let drawing=false,ink=false;
+ function resize(){
+  const old=ink?c.toDataURL():null;
+  const r=c.getBoundingClientRect();
+  c.width=Math.round(r.width*devicePixelRatio);
+  c.height=Math.round(r.height*devicePixelRatio);
+  ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+  ctx.strokeStyle="#e8d7ad";
+  ctx.lineWidth=2.2;ctx.lineCap="round";ctx.lineJoin="round";
+  if(old){const img=new Image();img.onload=()=>ctx.drawImage(img,0,0,r.width,r.height);img.src=old;}
+ }
+ resize();
+ window.addEventListener("resize",resize);
+ function pos(e){
+  const r=c.getBoundingClientRect();
+  return {x:e.clientX-r.left,y:e.clientY-r.top};
+ }
+ c.addEventListener("pointerdown",e=>{
+  drawing=true;ink=true;c.setPointerCapture(e.pointerId);
+  const p=pos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);
+ });
+ c.addEventListener("pointermove",e=>{
+  if(!drawing)return;
+  const p=pos(e);ctx.lineTo(p.x,p.y);ctx.stroke();
+ });
+ function stop(){drawing=false;ctx.beginPath();}
+ c.addEventListener("pointerup",stop);
+ c.addEventListener("pointercancel",stop);
+ c.dataset.hasInk="0";
+ const originalDown=c.onpointerdown;
+ c.addEventListener("pointerdown",()=>c.dataset.hasInk="1");
+ c._clear=()=>{ctx.clearRect(0,0,c.width,c.height);ink=false;c.dataset.hasInk="0";};
+}
+setupCanvas("signature1");
+setupCanvas("signature2");
+
+function clearSign(id){$(id)._clear();}
+
+function collect(){
+ return {
+  title:$("title").value.trim(),
+  people:{
+   first:$("person1").value.trim(),
+   second:$("person2").value.trim()
+  },
+  date:$("date").value,
+  promises:[...document.querySelectorAll('[name="promises"]:checked')].map(x=>x.value),
+  boundaries:$("boundaries").value.trim(),
+  repairPlan:$("repair").value.trim(),
+  confirmations:{
+   first:$("consent1").checked,
+   second:$("consent2").checked
+  },
+  signatures:{
+   first:$("signature1").dataset.hasInk==="1"?$("signature1").toDataURL("image/png"):null,
+   second:$("signature2").dataset.hasInk==="1"?$("signature2").toDataURL("image/png"):null
+  },
+  note:$("note").value.trim(),
+  savedAt:new Date().toISOString(),
+  notice:"این اطلاعات توافق شخصی هستند؛ امضا به‌تنهایی سند حقوقی معتبر یا اثبات هویت نیست."
+ };
+}
+
+function validate(){
+ if(!$("agreement").reportValidity())return false;
+ if(!$("consent1").checked||!$("consent2").checked){
+  alert("هر دو نفر باید تأیید داوطلبانه خود را علامت بزنند.");
+  return false;
+ }
+ if(!$("signature1").dataset.hasInk||$("signature1").dataset.hasInk!=="1"||
+    !$("signature2").dataset.hasInk||$("signature2").dataset.hasInk!=="1"){
+  alert("برای ثبت، هر دو امضا را وارد کنید.");
+  return false;
+ }
+ if(!document.querySelector('[name="promises"]:checked')){
+  alert("حداقل یک تعهد مورد توافق را انتخاب کنید.");
+  return false;
+ }
+ return true;
+}
+
+function saveLocal(data){
+ localStorage.setItem(STORE,JSON.stringify(data));
+}
+
+$("agreement").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!validate())return;
+ try{
+  saveLocal(collect());
+  $("status").textContent="عهد در حافظه این مرورگر ذخیره شد.";
+ }catch(err){
+  $("status").textContent="ذخیره انجام نشد؛ از دریافت فایل اطلاعات استفاده کنید.";
+ }
+});
+
+function downloadBlob(blob,name){
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement("a");
+ a.href=url;a.download=name;a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+function downloadData(){
+ if(!validate())return;
+ const data=collect();
+ const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+ downloadBlob(blob,"ahde-ma-hamid-sahar.json");
+ $("status").textContent="فایل اطلاعات آماده دریافت است.";
+}
+async function shareData(){
+ if(!validate())return;
+ const data=collect();
+ const textContent=
+  "عهد ما — "+data.people.first+" و "+data.people.second+
+  "\nتاریخ: "+data.date+
+  "\nتعهدهای انتخاب‌شده: "+data.promises.join("، ")+
+  "\nتوافق: "+(data.boundaries||"ثبت نشده")+
+  "\nبرنامه جبران: "+(data.repairPlan||"ثبت نشده")+
+  "\nاین متن جایگزین فایل امضاها نیست.";
+ try{
+  const file=new File([JSON.stringify(data,null,2)],
+   "ahde-ma-hamid-sahar.json",{type:"application/json"});
+  if(navigator.canShare&&navigator.canShare({files:[file]})){
+   await navigator.share({title:"عهد ما",text:textContent,files:[file]});
+  }else if(navigator.share){
+   await navigator.share({title:"عهد ما",text:textContent});
+   downloadBlob(new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),
+    "ahde-ma-hamid-sahar.json");
+  }else{
+   downloadBlob(new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),
+    "ahde-ma-hamid-sahar.json");
+   alert("فایل را دانلود کن و از پیام‌رسان دلخواهت ارسال کن.");
+  }
+  $("status").textContent="پنجره اشتراک‌گذاری باز شد؛ ارسال را خودت تأیید کن.";
+ }catch(err){
+  if(err.name!=="AbortError")alert("اشتراک‌گذاری در دسترس نبود؛ فایل اطلاعات را دریافت کن.");
+ }
+}
+function deleteData(){
+ if(!confirm("اطلاعات ذخیره‌شده این سایت در این مرورگر پاک شود؟"))return;
+ localStorage.removeItem(STORE);
+ $("status").textContent="اطلاعات ذخیره‌شده از این مرورگر پاک شد.";
+}
+</script>
+</body>
+</html>
